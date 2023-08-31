@@ -1,0 +1,9 @@
+00000001_020.jpg: cat
+00000001_024.jpg: dog
+00000001_027.jpg: cat
+00000002_001.jpg: cat
+00000002_003.jpg: cat
+00001292_000.jpg: dog
+dog.4004.jpg: dog
+dog.4012.jpg: dog
+dog.4027.jpg: dog
