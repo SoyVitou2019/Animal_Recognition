@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1" />
+        <title>Testing Pyscript</title>
+        <script defer src="https://pyscript.net/latest/pyscript.js"></script>
+        <link rel="stylesheet" type="text/css" href="style.css">
+
+        
+  </head>
+  <body>
+          
+        <section style = "display:flex; gap:15px; margin-top:20px">
+                  <h1 id = "output" style = "margin-left:40px; "></h1>
+                  <section style = " ">
+                            <p style="margin-top:26px; margin-bottom:0px; font-size:20px">FE's Researcher</p>
+                            <p style="margin-top:0px; font-size:10px">Animal Recognition</p>
+                  </section>
+          
+        </section>
+
+
+
+        
+        <h1>Image Upload</h1>
+        <div id="drop-zone">
+            <p>Drag and drop an image file here, or click to select a file.</p>
+        </div>
+        <form>
+            <label for="img">Select image:</label>
+            <input type="file" id="img" name="img" accept="image/*">
+            <input type="submit">
+        </form>
+        
+        <py-env>
+            - paths:
+                - /main.py
+        </py-env>
+        <py-script>
+            def display_image():
+                img_element = js.document.createElement('img')
+                img_element.src = './Image/FE\'s logo.png'
+                img_element.style.width = '50px'
+                img_element.style.height = '50px'
+                js.document.getElementById('output').appendChild(img_element)
+                js.document.getElementById('output').style.width = "50px"
+                js.document.getElementById('output').style.height = "50px"
+            display_image()
+            
+            
+            
+        </py-script>
+  </body>
+</html>
